@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Responsive Document</title> 
+ <style> 
+ #d1 { 
+ width: 100%; 
+ display: flex; 
+ flex-wrap: wrap; 
+ } 
+ 
+ #d2 { 
+ width: 50%; 
+ float: left; 
+ box-sizing: border-box; 
+ padding: 20px; /* Add padding for spacing */ 
+ } 
+ 
+ #d3 { 
+ width: 50%; 
+ float: left; 
+ box-sizing: border-box; 
+ padding: 10px; /* Add padding for spacing */ 
+ } 
+ /* Media query for screens with a max-width of 700px */ 
+ @media screen and (max-width: 700px) { 
+ #d2, #d3 { 
+ width: 100%; 
+ float: none; /* Remove float for stacking on smaller screens */ 
+ padding: 20px; /* Add padding for spacing */ 
+ } 
+ } 
+ </style> 
+</head> 
+<body> 
+ <div id="d1"> 
+ <div id="d2"> 
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dignissimos pariatur quis 
+quidem ratione fugiat corrupti quam sequi impedit cupiditate nesciunt illo minus illum sit aut nemo 
+nulla quia beatae, tempora cum dolor quaerat assumenda a! Nobis, voluptates? Accusantium vero 
+officia consequatur ratione, doloribus reiciendis recusandae voluptatem ab aut eveniet nisi 
+voluptates tempore veritatis iusto natus magni ea animi earum. Ipsum minima natus maiores dicta 
+laudantium obcaecati odit iure corporis earum et provident suscipit sapiente placeat Lorem, ipsum 
+dolor sit amet consectetur adipisicing elit. Enim totam quo iusto cum eveniet, minima autem error 
+cupiditate officiis accusamus impedit quaerat iure facilis porro aliquam atque vel nostrum a rem 
+deleniti blanditiis molestias officia? Voluptate asperiores ipsa, obcaecati itaque sequi consectetur! 
+Nisi nobis praesentium accusantium doloremque voluptas qui perspiciatis? magni ad nisi nulla, saepe 
+temporibus excepturi incidunt praesentium optio labore expedita! Provident iure aliquid excepturi 
+animi modi veniam aspernatur, voluptatem reprehenderit. Nihil, enim.</p> 
+ </div> 
+ <div id="d3"> 
+ <img src="assets/image/nature3.jpg" alt=""> 
+ </div> 
+ </div> 
+</body> 
+</html>

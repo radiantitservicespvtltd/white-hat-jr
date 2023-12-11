@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteHat Jr live 1:1 Art, Animation & Video for kids</title>
+    <link rel="icon" type="image" href="assets/Images/whitehat-jr-Favicon.jpg">
+
+    <style>
+        * { margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+        
+        div.head { 
+            height:100px ;
+            width: 100%;
+            background-color: white;
+            float: left; 
+            box-sizing: border-box;
+        }
+        
+        ul { list-style-type: none;  font-size: 20px;}
+        
+        ul li { 
+            display: inline-block;
+            position: relative; 
+            }
+        
+        ul li a { 
+            display: block;
+            padding: 20px 35px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            
+        }    
+
+        ul li ul.drop li { display: block;}
+
+        ul li ul.drop { 
+            width: 100%;
+            background-color: white;
+            color: black;
+            position: absolute;
+            display: none;
+            z-index: 1;
+        }
+
+        ul li a:hover { background-color: orangered; color: white;}
+
+        ul li:hover ul.drop { display:block;}
+
+        ul:first-child{margin-top: 20px; margin-left: 50px; box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5); }
+
+        .Join .btn { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 100px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s;}
+        
+        .btn a { 
+            text-decoration: none;
+            color: black; }
+        
+        .Join:hover .btn{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px;}
+
+        .Join:hover .btn a { color: white;}
+
+        .slots .book { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 320px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s; 
+            animation: books 1s ease-in-out 2s infinite alternate;}
+
+        @keyframes books { 
+            from { background-color: white; color: black; }
+            to { background-color:rgba(255, 69, 0,0.9); color: white;}
+        }    
+         
+        .book a { 
+            text-decoration: none;
+            color: black; }    
+        
+        .slots:hover .book{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px; 
+            animation: none;}
+
+        .slots:hover .book a { color: white;}      
+
+        div.sin iframe { float: right; width: 50%;}
+
+        div.sin a { 
+            text-decoration: none;
+            color: black;
+            display: block;
+            float: left;
+            padding: 15px 35px;
+            background-color: rgba(164, 238, 17, 0.981);
+            border-radius: 15px; }
+
+        .sin a:hover{ background-color:violet; color: white;}   
+        
+        div.sin { 
+            width: 100%; 
+            height: auto; 
+            padding: 30px 80px; 
+            background-image: url(assets/Images/background\ art.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;}
+
+            .why { padding: 20px 120px; 
+            text-align: center; 
+            width: 100%;
+            margin-top: 30px;
+            height: auto;
+            float: left;}
+
+        .why h1 { font-size: 40px; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            padding: 15px;}
+        
+        .why p { font-size: large;}
+
+        div.curriculum { 
+            width: 15%;
+            height: 180px;
+            background-color: #d4b9f9;
+            font-size: larger;
+            padding: 15px;
+            float: left;
+            margin: 10px 25px;
+            box-shadow: 2px 2px 5px black;
+            transition: 0.5s;
+        }   
+
+        div.curriculum:hover { 
+            width: 16%;
+            height: 200px;
+        }
+
+        div.mark{ 
+            margin-top: 35px;
+            padding: 20px;
+            background-image: linear-gradient(to bottom right,#10e481,#caffec,#00332c);
+            float: left;
+            width: 100%;
+        }
+
+        div.mark a { 
+            text-decoration: none;
+            color: black;
+            display: block;
+            float: left;
+            margin-left: 550px;
+            /* margin-right: auto; */
+            padding: 15px 35px;
+            background-color: #fed533;
+            border-radius: 15px;
+            margin-top: 25px;
+        }
+
+        .mark a:hover{ background-color: #8080dc; color: white;}  
+
+        div.faq {
+            float: left;
+            padding: 20px 90px;
+            text-align: justify;
+        }
+
+        .faq h3 { padding: 15px; color: rgb(86, 84, 84);}
+
+        .faq p { color: rgb(101, 96, 96);}
+
+        .faq img { 
+            float: right;
+            margin-top: 0;
+            height: 30px;
+            width: 30px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <Div class="head">
+        <img src="assets/Images/White hat jr logo.jpg" alt="WhiteHat Jr" height="100px" width="200px" style="float: left; margin-left:30px;">
+
+        <div id="nav" style="float: left;">
+        <ul> 
+            <li> <a href="Project.html">Join Our Courses :</a>
+                <ul class="drop">
+                    <li><a href="Project.html">Coding</a></li>
+                    <li><a href="math.html">Math</a></li>
+                    <li><a href="music.html">Music (kids)</a></li>
+                    <li><a href="art.html">Art, Animation & Video</a></li>
+                </ul>
+            <!-- <li><a href="Join Class Now" >Join Class Now</a></li>     -->
+            </li>
+        </ul>
+        </div>
+
+        <div class="Join">
+            <button class="btn">
+                <a href="Login.html" >Join Class Now</a>
+            </button> 
+        </div>
+
+        <div class="slots">
+            <button class="book">
+                <img src="assets/Images/calender icon 16px.png" style="float: left; margin-right: 10px; height: 20px; width: 20px;">
+                <a href="Login.html"> Book a Free Trial</a>
+            </button> 
+        </div>
+
+    </Div>
+
+    <div class="sin">
+        <h1 style="font-size: 60px; float: left; text-shadow: 1px 2px 3px black; color: #10169f;">
+            The Art, Animation <br> & Video 
+        </h1>
+
+        <img src="assets/Images/art poster.jpg" height="350px" style="float: right; width: 50%;">
+
+        <p style="float: left; font-size: 20px; padding-top: 30px; font-weight: bolder; ">Dream it. Create it. Bring it to life with our live 1:1 online classes.
+            <br><br>
+            <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Trial class</a>
+        </p>
+
+    </div>
+
+        <div class="note" style="float: left; width: 100%; height:200px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: #f2711b; ">
+           <img src="assets/Images/camkit stationary.png" width="30%" style="float: left;"> 
+
+           <h1 style="padding-top: 30px; color: white;"> Includes a beautiful Digital CamKit* with Art-Cam and <br> all art supplies*</h1>
+          <br><br><br>
+           <p style="color: white;">*The Digital CamKit is not for individual sale and is only included with the purchase of an Art, Animation & Video package.</p>
+        </div>
+
+        <div class="why">
+            <h1>Why learn Art, Animation & Video with WhiteHat Jr.?</h1>
+    
+            <p>Creative thinkers make our world better. <br>
+                From drawing illustrated picture books to developing original characters to creating exciting animated videos, WhiteHat Jr’s Art, Animation & <br>
+                Video’s curriculum empowers your child to become a visual thinker. Your child will build a beautiful portfolio of their creativity and imagination <br>
+                something you can enjoy for years to come</p> <br> <hr><br> 
+            
+            <div class="curriculum" style="padding-top: 55px;">1:1 classes by trained art <br>teachers</div>
+            <div class="curriculum" style="padding-top: 45px;">Structured and age- <br>appropriate curriculum </div>
+            <div class="curriculum" style="padding-top: 45px;">Exciting projects in illustration, <br>animation, and video creation</div>
+            <div class="curriculum" style="padding-top: 25px;">Digital CamKit with Art-Cam <br> and all art supplies required for <br> the course</div>
+            <div class="curriculum" style="padding-top: 35px;">A great blend of hands-on <br>activities and digital <br>experiences</div>
+    
+            <br>
+        </div>
+   
+
+
+    <div class="sin" style="margin-top: 50px;">
+        <h1 style="font-size: 40px; float: left; text-shadow: 1px 2px 3px black;">
+            The Art, Animation & Video <br>course is designed to <br>nurture <br>your child's creativity.
+        </h1>
+        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Xx0IJQY2gwc?si=lAT6gWJSNY-ft_ml" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+
+        <p style="float: left; font-size: 20px; padding-top: 30px; font-weight: bolder;">Why is childhood a crucial time for creativity? See for yourself.
+
+
+            <br><br>
+            <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Trial class</a>
+        </p>     
+
+    </div> 
+
+    <div class="mark">
+        <h1 style="text-align: center; color: #00332c; font-size: 45px;">Let's Create Amazing Stories</h1>
+        <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Trial Class</a>
+    </div>
+
+    <div class="faq">
+        <h1 style="text-align: center;">Frequently Asked Question's(FAQs)</h1>
+
+        <h3>My child has already taken some art classes. Can they still take this course?</h3>
+        <p>Absolutely! Art, Animation & Video is much more than a traditional art class. It's multidisciplinary and innovative, combining the best of analog and digital practices. From their very first class, your child will bring their stories to life using illustration, claymation, paper cutout animation, digital animation, and video. For more details, please</p> <br><hr>
+
+        <h3>Do I need any special setup/stationery to enroll in the course?</h3>
+        <p>No. We will send you a Digital CamKit containing an Art-Cam and all required art supplies from our partner, Faber Castell.</p> <br><hr>
+
+        <h3>Will my child get personalized attention?</h3>
+        <p>Yes! All our Art, Animation & Video classes are 1-to-1. This means that your child’s dedicated teacher will give your child their full attention.</p> <br><hr>
+
+        <h3>How many classes should my child attend in a week?</h3>
+        <p>We recommend 2 classes a week.   </p> <br><hr>
+
+        <h3>Can this course be taken on a phone or tablet?</h3>
+        <p>Not as of now. A laptop or desktop is required to take this course.</p> <br><hr> <br>
+
+        <p>Copyright WhiteHat Education Technology Pvt ltd © 2022. All Rights Reserved
+
+            <a href="https://www.facebook.com/whitehatjr" target="_blank">
+                <img src="assets/Images/facebook logo_icon.png" >
+            </a>
+
+            <a href="https://www.instagram.com/whitehatjr/?hl=en" target="_blank">
+                <img src="assets/Images/instagram logo_icon.png" >
+            </a>
+
+            <a href="https://twitter.com/whitehatjunior?lang=en" target="_blank">
+                <img src="assets/Images/twitter logo_icon.png">
+            </a>
+
+            <a href="https://www.youtube.com/c/WhitehatJr">
+                <img src="assets/Images/youtube logo_icon.png">
+            </a>
+        </p> <br> <br><hr>
+
+
+
+    </div>
+
+</body>

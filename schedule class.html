@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteHat Junior</title>
+    <link rel="icon" type="image" href="assets/Images/whitehat-jr-Favicon.jpg">
+    <style>
+        h1{ text-transform: capitalize;}
+        
+
+        div.mainpage { 
+            width: 100%;
+            height: 700px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to bottom right,white,#dfeefa,#a0cff0,#1f2e4c);
+            /* display: flex; 
+ flex-wrap: wrap;  */
+        }
+
+        div.login { 
+            /* box-sizing: border-box; */
+            width: 30%;
+            height: auto; 
+            background-image: linear-gradient(to bottom right,#ebe3d6,#c2a582,#b0885f,#2f1d19);
+            padding: 25px 35px 40px 25px ; 
+            border-radius: 16px;
+            box-shadow: 8px 5px 5px rgb(74, 74, 74); 
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            margin-top: 30px;
+            position:absolute;
+        }
+
+        h1 { text-align: center; }
+
+        label { 
+            font-size: large;
+        }
+
+        input[type=text] ,input[type=email]{ 
+            width: 100%;
+            outline: none;
+            height: 25px;
+            border-radius: 6px;
+            border: 1px solid rgba(109, 107, 107, 0.634); 
+            transition: 0.5s ease;}
+
+        input[type=text]:hover,input[type=email]:hover{ 
+            border: 1px solid rgb(57, 56, 56); 
+            background-color: rgba(212, 206, 206, 0.541);}
+
+        select { 
+            width: 45%;
+            outline: none;
+            height: 25px; }
+
+        select:hover{ border: 1px solid black;}     
+
+        input[type=tel] { 
+            width: 50%;
+            height: 19px;
+            outline: none;
+            float: right;}
+
+        div.capcha {
+            height: 50px;
+            background-color: white;
+            border: 1px solid gray;
+            width: max-content;
+            padding: 0 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+        }
+
+        div.capcha:hover { 
+            border: 2px solid #242424d5;
+        }
+
+        input[type=checkbox]:checked {
+            accent-color: green;
+         }
+
+        input:checked ~ label { color: green;} 
+
+        p { 
+            font-size: 12px;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            height: 40px;
+            border-radius: 16px;
+            outline: none;
+            border: none;
+            background-color: rgba(255, 89, 0, 0.9);
+            font-size: larger;
+            color: white;
+        }
+
+        input[type=submit]:hover { 
+            background-color: #20c725;
+            box-shadow: 2px 2px 5px grey;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainpage">
+        <div>
+        <img src="assets/Images/jr image logo.svg" height="160px" width="280px" style="float: left; padding-left: 30px;"></div>
+        <div class="login">
+            <form action="action_page.php" autocomplete="off" method="post">
+                <h1 style="padding-bottom: 5px;">Book Your Free Coding Class</h1>
+
+                <label for="phone">Mobile No :</label> <br>
+
+                <select name="countrycode" id="countrycode">
+                    <option value="India">India +91</option>
+                    <option value="Australia">Australia +61</option>
+                    <option value="Canada">Canada +1</option>
+                    <option value="iceland">Iceland +354</option>
+                    <option value="italy">Italy +39</option>
+                    <option value="Maldives">Maldives +960</option>
+                    <option value="Mexico">Mexico +52</option>
+                    <option value="Nepal">Nepal +977</option>
+                    <option value="portugal">Portugal +351</option>
+                    <option value="Russia">Russia +7</option>
+                </select>
+
+                <input type="tel" id="phone" placeholder="Mobile no" maxlength="10" required autofocus><br><br>   
+
+                <label for="mailid"> Email-Id :</label><br>
+                <input type="email" id="mailid" placeholder="Enter your Email-id" required> <br><br> 
+
+                <div class="capcha">
+                    <input type="checkbox" id="capcha" required>
+                    <label for="capcha"> I'm not a Robot</label>
+                    <img src="assets/Images/recaptcha-icon.webp" height="30px" width="30px" style="padding-top: 5px; padding-left: 7px;">
+                </div>
+                
+                <p>
+                    By clicking the 'Schedule a FREE Class' button you agree to Whitehat Jr Terms & Conditions, acknowledge that you have read the Privacy Policy and to receive calls and text from, or on behalf of, Whitehat Jr at the number you provided, including for marketing purposes and by autodialer. Email to opt-out. Your consent is not a condition of any purchase.
+                </p>
+
+                <input type="submit" value="Schedule a Free Class"> 
+
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteHat Junior</title>
+    <link rel="icon" type="image" href="assets/Images/whitehat-jr-Favicon.jpg">
+    <style>
+        h1{ text-transform: capitalize;}
+        
+
+        div.mainpage { 
+            width: 100%;
+            height: 700px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.login { 
+            /* box-sizing: border-box; */
+            width: 35%;
+            height: auto; 
+            background-image: linear-gradient(to bottom right , #d7f0e7,#8fb9a0);
+            padding: 25px 35px 40px 25px ; 
+            border-radius: 16px;
+            box-shadow: 8px 5px 5px rgb(74, 74, 74); 
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            margin-top: 30px;
+            position:absolute;
+        }
+
+        h1 { text-align: center; }
+
+        label { 
+            font-size: large;
+        }
+
+        input[type=text] ,input[type=email]{ 
+            width: 100%;
+            outline: none;
+            height: 25px;
+            border-radius: 6px;
+            border: 1px solid rgba(109, 107, 107, 0.634); 
+            transition: 0.5s ease;}
+
+        input[type=text]:hover,input[type=email]:hover{ 
+            border: 1px solid rgb(57, 56, 56); 
+            background-color: rgba(212, 206, 206, 0.541);}
+
+        select { 
+            width: 45%;
+            height: 25px; }
+
+        select:hover{ border: 1px solid black;}     
+
+        input[type=tel] { 
+            width: 50%;
+            height: 19px;
+            float: right;}
+
+        div.capcha {
+            height: 50px;
+            background-color: white;
+            border: 1px solid gray;
+            width: max-content;
+            padding: 0 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.capcha:hover { 
+            border: 2px solid #242424d5;
+        }
+
+        input[type=checkbox]:checked {
+            accent-color: green;
+         }
+
+        input:checked ~ label { color: green;} 
+
+        p { 
+            font-size: 12px;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            height: 40px;
+            border-radius: 16px;
+            outline: none;
+            border: none;
+            background-color: rgba(255, 89, 0, 0.9);
+            font-size: larger;
+            color: white;
+        }
+
+        input[type=submit]:hover { 
+            background-color: rgb(242, 46, 46);
+            box-shadow: 2px 2px 5px grey;
+            cursor: pointer;
+        }
+
+        div.google { 
+            width: 100%;
+            height: 40px;
+            border-radius: 16px;
+            outline: none;
+            border: none;
+            background-color: rgb(224, 221, 221);
+            text-align: center;
+            padding-top: 10px;  
+            box-sizing: border-box;       
+        }
+
+        .google a {
+            text-decoration: none;
+            color: black;
+            font-size: larger;
+        }
+
+        div.google:hover { 
+            background-color: rgba(44, 44, 232, 0.537);
+            box-shadow: 2px 2px 5px gray;  
+        }
+
+        div.google:hover a{ color: white;}    
+
+        @media screen and (max-width:1000px) {
+            img { position: fixed; float: none; }
+            div.login { width: 60%; padding: 20px 30px;}
+
+            div.capcha img{position: fixed; width: max-content; padding: 10px 20px; }
+            
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="mainpage">
+        <img src="assets/Images/main form background.avif" width="70%" height="100%" style="float: right;">
+        <img src="assets/Images/White hat jr logo.jpg" height="160px" width="280px" style="float: left;">
+        <div class="login">
+            <form action="action_page.php" autocomplete="off" method="post">
+                <h1>Log in to Your Account</h1>
+
+                <label for="name">Name : </label>
+                <input type="text" id="name" placeholder="Your Name"> <br><br>
+
+                <label for="phone">Mobile No :</label> <br>
+
+                <select name="countrycode" id="countrycode">
+                    <option value="India">India +91</option>
+                    <option value="Australia">Australia +61</option>
+                    <option value="Canada">Canada +1</option>
+                    <option value="iceland">Iceland +354</option>
+                    <option value="italy">Italy +39</option>
+                    <option value="Maldives">Maldives +960</option>
+                    <option value="Mexico">Mexico +52</option>
+                    <option value="Nepal">Nepal +977</option>
+                    <option value="portugal">Portugal +351</option>
+                    <option value="Russia">Russia +7</option>
+                </select>
+
+                <input type="tel" id="phone" placeholder="Mobile no" maxlength="10" required><br><br>   
+
+                <label for="mailid"> Email-Id :</label><br>
+                <input type="email" id="mailid" placeholder="Enter your Email-id"> <br><br> 
+
+                <div class="capcha">
+                    <input type="checkbox" id="capcha">
+                    <label for="capcha"> I'm not a Robot</label>
+                    <img src="assets/Images/recaptcha-icon.webp" height="30px" width="30px" style="padding-top: 5px; padding-left: 7px;">
+                </div>
+                
+                <p>
+                    By clicking the 'Schedule a FREE Class' button you agree to Whitehat Jr Terms & Conditions, acknowledge that you have read the Privacy Policy and to receive calls and text from, or on behalf of, Whitehat Jr at the number you provided, including for marketing purposes and by autodialer. Email to opt-out. Your consent is not a condition of any purchase.
+                </p>
+
+                <input type="submit" value="Login"> <hr>
+
+                <h3 style="text-align: center; margin: 0 0 5px 0; padding: 0;">Or</h3> 
+
+                <div class="google">
+                <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dsign%2Bin%2Bgoogle%26oq%3Dsign%2Bin%2B%26aqs%3Dchrome.2.69i57j0i433i512j0i131i433i512l2j0i512l2j0i131i433i512l2j0i512l2.7039j0j15%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=en&ifkv=AYZoVhfRdWL8DmsULlLSdmT0Mi9CTOILJvEUG98TWLVIk5k2pnxWIruyZzoD9WvjvYvGJaOC06nCUA&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S755690856%3A1695766652367085&theme=glif">
+                     Continue with Google</a>
+                </div>    
+
+
+
+                
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

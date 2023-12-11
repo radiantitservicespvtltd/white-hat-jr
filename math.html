@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteHat Jr | Best Online Math Classes | Learn Fun Math</title>
+    <link rel="icon" type="image" href="assets/Images/whitehat-jr-Favicon.jpg">
+
+    <style>
+        * { margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+        
+        div.head { 
+            height:100px ;
+            width: 100%;
+            background-color: white;
+            float: left; 
+            box-sizing: border-box;
+        }
+        
+        ul { list-style-type: none;  font-size: 20px;}
+        
+        ul li { 
+            display: inline-block;
+            position: relative; 
+            }
+        
+        ul li a { 
+            display: block;
+            padding: 20px 35px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            
+        }    
+
+        ul li ul.drop li { display: block;}
+
+        ul li ul.drop { 
+            width: 100%;
+            background-color: white;
+            color: black;
+            position: absolute;
+            display: none;
+            z-index: 1;
+        }
+
+        ul li a:hover { background-color: orangered; color: white;}
+
+        ul li:hover ul.drop { display:block;}
+
+        ul:first-child{margin-top: 20px; margin-left: 50px; box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5); }
+
+        .Join .btn { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 100px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s;}
+        
+        .btn a { 
+            text-decoration: none;
+            color: black; }
+        
+        .Join:hover .btn{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px;}
+
+        .Join:hover .btn a { color: white;}
+
+        .slots .book { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 320px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s; 
+            animation: books 1s ease-in-out 2s infinite alternate;}
+
+        @keyframes books { 
+            from { background-color: white; color: black; }
+            to { background-color:rgba(255, 69, 0,0.9); color: white;}
+        }    
+         
+        .book a { 
+            text-decoration: none;
+            color: black; }    
+        
+        .slots:hover .book{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px; 
+            animation: none;}
+
+        .slots:hover .book a { color: white;}   
+        
+        
+
+        iframe { float: right; width: 50%;}
+
+        div.sin a { 
+            text-decoration: none;
+            color: white;
+            display: block;
+            float: left;
+            padding: 15px 35px;
+            background-color: rgba(238, 161, 17, 0.981);
+            border-radius: 15px; }
+
+        .sin a:hover{ background-color: purple;}   
+        
+        div.sin { 
+            width: 100%; 
+            height: auto; 
+            padding: 30px 80px; 
+            background-color: #ffcbea; 
+            background-image: linear-gradient(to bottom right,#72d4d6, #d3f4f3 ,#0a2429);
+            float: left;}
+
+        .why { padding: 20px 120px; 
+            text-align: center; 
+            width: 100%;
+            height: auto;
+            float: left;}
+
+        .why h1 { font-size: 40px; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            padding: 15px;}
+        
+        .why p { font-size: large;}
+
+        div.curriculum { 
+            width: 15%;
+            height: 100px;
+            background-color: #d4b9f9;
+            font-size: larger;
+            float: left;
+            margin: 10px 25px;
+            box-shadow: 2px 2px 5px black;}
+       
+
+
+
+        .sin h2 { padding-left: 60px; }
+
+        .sin h2{ font-size: 50px; }
+
+        div.faq {
+            float: left;
+            padding: 20px 90px;
+            text-align: justify;
+        }
+
+        .faq h3 { padding: 15px; color: rgb(86, 84, 84);}
+
+        .faq p { color: rgb(101, 96, 96);}
+
+        .faq img { 
+            float: right;
+            margin-top: 0;
+            height: 30px;
+            width: 30px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <Div class="head">
+        <img src="assets/Images/White hat jr logo.jpg" alt="WhiteHat Jr" height="100px" width="200px" style="float: left; margin-left:30px;">
+
+        <div id="nav" style="float: left;">
+        <ul> 
+            <li> <a href="Project.html">Join Our Courses :</a>
+                <ul class="drop">
+                    <li><a href="Project.html">Coding</a></li>
+                    <li><a href="math.html">Math</a></li>
+                    <li><a href="music.html">Music (kids)</a></li>
+                    <li><a href="art.html">Art, Animation & Video</a></li>
+                </ul>
+            <!-- <li><a href="Join Class Now" >Join Class Now</a></li>     -->
+            </li>
+        </ul>
+        </div>
+
+        <div class="Join">
+            <button class="btn">
+                <a href="Login.html" >Join Class Now</a>
+            </button> 
+        </div>
+
+        <div class="slots">
+            <button class="book">
+                <img src="assets/Images/calender icon 16px.png" style="float: left; margin-right: 10px; height: 20px; width: 20px;">
+                <a href="Login.html"> Book a Free Trial</a>
+            </button> 
+        </div>
+
+    </Div>
+
+
+    <div class="sin">
+        <h1 style="font-size: 40px; float: left; color: #1b4146;">Use Math to BUILD things <br>
+            Learn Live with Private <br>Batch <br>
+            For Grades 1 to 8</h1>
+        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lh3EpcVZOL0?si=QpANO6jQKYfqW1mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+
+        <p style="float: left; font-size: 20px;color: #1b4146;">Make your child Math confident for life! <br><br>
+            <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Math Trial</a>
+        </p>     
+
+    </div>
+
+    <div class="why">
+        <h1>Why Create with Math?</h1>
+
+        <p>Our curriculum is activity based to enable kids to get to the “Why” behind Math. We build enquiry, focus on depth over speed, <br>
+            and see mistakes as opportunities.Your child develops a strong foundation by building real-world applications with Math, falling in love with it forever.</p> <br> <hr><br> 
+         
+        <h2>What makes our curriculum different</h2>   
+        
+        <div class="curriculum" style="padding-top: 15px;">Designed based <br>on Leading edge research</div>
+        <div class="curriculum" style="padding-top: 35px;">BuildsMath Rigor</div>
+        <div class="curriculum" style="padding-top: 30px;">Class with Top Teachers</div>
+        <div class="curriculum" style="padding-top: 25px;">Real- World Capstone projects</div>
+        <div class="curriculum" style="padding-top: 30px;">Creative Activity-based curriculum</div>
+
+        <br>
+    </div>
+
+    <div class="sin">
+        <img src="assets/Images/math poster.jpg" height="300px" width="50%" style="float: left;"> 
+        <h2 style="float: left;color: #1b4146;">Make your child Math <br> confident for life</h2>
+        <p style="float: left; padding-left: 60px; padding-top: 25px; font-size: larger; color: #1b4146">Ace concepts of mathematics with personalized <br>learning <br><br> 
+        <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Math Trial</a></p>
+
+    </div>
+
+    <div class="note" style="float: left; width: 100%; height: auto; font-size: 35px; font-weight: bold; padding: 40px; background-color: #fde58a; text-align: center; text-shadow:1px 1px 3px blue;">
+        Create With Math is the top Math learning
+        platform for creators of tomorrow.
+    </div>
+
+    <div class="faq">
+        <h1 style="text-align: center;">Frequently Asked Question's(FAQs)</h1>
+
+        <h3>Will this course be helpful for academics?</h3>
+        <p>Our pathbreaking curriculum is designed based on Leading Edge Research that recommends inculcating a Math Mindset in children through projects and play. This helps children enjoy the subject and build Math confidence for life.</p> <br><hr>
+
+        <h3>How is this course different from the one taught in schools?</h3>
+        <p>Math is commonly taught in schools in an abstract form, which does not help children build a connection with the subject. The conventional exam process adds to the Math anxiety among children. To address these gaps, our pathbreaking curriculum is built on the real-world application of Math. It is designed to help your child understand the “Why” behind Math, build a strong foundation of concepts, solve complex problems, create something meaningful, and therefore, learn Math at an advanced pace.</p> <br><hr>
+
+        <h3>What is taught in this course?</h3>
+        <p>We teach Math concepts connecting them to real-world occurrences through the unique Capstone Projects. Our pathbreaking curriculum follows the US Common Core Standards and is adapted to ICSE and CBSE boards for Indian students.</p> <br><hr>
+
+        <h3>Does this include the school Math portion?</h3>
+        <p>The curriculum is adapted for ICSE and CBSE board Math curriculum and is based on US Common Core Standards for Math.</p> <br><hr>
+
+        <h3>Will these be one-on-one classes?</h3>
+        <p>Yes. We offer one-on-one classes to ensure each student gets the personalized attention they need to excel at Math. The teacher first understands your child's learning level for each topic and accordingly introduces activities based on what's best suited for them.</p> <br><hr>
+
+        <h3>What is the age eligibility?</h3>
+        <p>Presently, we have classes for grades 1 to 8, but higher grades will be available soon.</p> <br><hr>
+
+        <h3>What will be the benefits of this particular course?</h3>
+        <p>Our curriculum is built as a series of activities on GeoGebra, which is a leading tech platform that helps children work on Math problems in an interactive and fun way. Our dedicated teachers are trained to celebrate mistakes and see them as a learning opportunity. Our unique Capstone Projects build Math modeling skills, integrate coding for computational purposes, and help build applications and solutions that can solve real-world problems.</p>
+
+        <br><br><hr>
+
+        <p style="padding-top: 15px;">Copyright WhiteHat Education Technology Pvt ltd © 2022. All Rights Reserved
+
+            <a href="https://www.facebook.com/whitehatjr" target="_blank">
+                <img src="assets/Images/facebook logo_icon.png" >
+            </a>
+
+            <a href="https://www.instagram.com/whitehatjr/?hl=en" target="_blank">
+                <img src="assets/Images/instagram logo_icon.png" >
+            </a>
+
+            <a href="https://twitter.com/whitehatjunior?lang=en" target="_blank">
+                <img src="assets/Images/twitter logo_icon.png">
+            </a>
+
+            <a href="https://www.youtube.com/c/WhitehatJr">
+                <img src="assets/Images/youtube logo_icon.png">
+            </a>
+                
+        </p> <br><hr>
+    </div>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteHatJr | LIVE 1:1 Music Course for kids</title>
+    <link rel="icon" type="image" href="assets/Images/whitehat-jr-Favicon.jpg">
+
+    <style>
+        * { margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+        
+        div.head { 
+            height:100px ;
+            width: 100%;
+            background-color: white;
+            float: left; 
+            box-sizing: border-box;
+        }
+        
+        ul { list-style-type: none;  font-size: 20px;}
+        
+        ul li { 
+            display: inline-block;
+            position: relative; 
+            }
+        
+        ul li a { 
+            display: block;
+            padding: 20px 35px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            
+        }    
+
+        ul li ul.drop li { display: block;}
+
+        ul li ul.drop { 
+            width: 100%;
+            background-color: white;
+            color: black;
+            position: absolute;
+            display: none;
+            z-index: 1;
+        }
+
+        ul li a:hover { background-color: orangered; color: white;}
+
+        ul li:hover ul.drop { display:block;}
+
+        ul:first-child{margin-top: 20px; margin-left: 50px; box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5); }
+
+        .Join .btn { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 100px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s;}
+        
+        .btn a { 
+            text-decoration: none;
+            color: black; }
+        
+        .Join:hover .btn{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px;}
+
+        .Join:hover .btn a { color: white;}
+
+        .slots .book { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 320px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s; 
+            animation: books 1s ease-in-out 2s infinite alternate;}
+
+        @keyframes books { 
+            from { background-color: white; color: black; }
+            to { background-color:rgba(255, 69, 0,0.9); color: white;}
+        }    
+         
+        .book a { 
+            text-decoration: none;
+            color: black; }    
+        
+        .slots:hover .book{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px; 
+            animation: none;}
+
+        .slots:hover .book a { color: white;}  
+        
+        div.music a { 
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin-left: 20px;
+            float: left;
+            padding: 15px 35px;
+            background-color: #d5294d;
+            border-radius: 15px; }
+
+        .music a:hover{ background-color: rgba(38, 38, 254, 0.891);}  
+
+        div.music { 
+            width: 100%; 
+            height: auto; 
+            padding: 30px 80px; 
+            background-color: #ffcbea; 
+            background-image: linear-gradient(to bottom right,#fbb0d5, #ffcbea ,#d5294d 90%);
+            float: left;}
+
+
+            iframe { float: right; width: 50%; box-shadow: 2px 2px 5px black;}   
+
+        div.poster { 
+            padding: 20px;
+            width: 100%;
+            height: 350px;
+            margin-top: 30px;
+            float: left;
+            /* background-color: #b3ccff; */
+            background-image: linear-gradient(to bottom right,#b3ccff,#d5e4ff,#0a0b5c);
+        }    
+
+        div.front {
+            width: 40%;
+            margin-left: 50px;
+            float: left;}
+
+            div.front a { 
+            text-decoration: none;
+            color: white;
+            display: block;
+            float: left;
+            padding: 15px 35px;
+            background-color: #d5294d;;
+            border-radius: 15px; }
+
+        .front a:hover{ background-color: #0000ff;}       
+
+        .why { padding: 20px 120px; 
+            text-align: center; 
+            width: 100%;
+            height: auto;
+            float: left;}
+
+        .why h1 { font-size: 40px; 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            padding: 15px;}
+        
+        .why p { font-size: large;}
+
+        div.curriculum { 
+            width: 15%;
+            height: 150px;
+            background-color: #d4b9f9;
+            font-size: larger;
+            float: left;
+            padding: 15px;
+            margin: 10px 25px;
+            box-shadow: 2px 2px 5px black;
+            transition: 0.5s;}
+
+        div.why a { 
+            text-decoration: none;
+            color: white;
+            display: block;
+            float: left;
+            margin-left: 420px;
+            /* margin-right: auto; */
+            padding: 15px 35px;
+            background-color: #d5294d;;
+            border-radius: 15px; }
+
+        .why a:hover{ background-color: #0000ff;}  
+
+        div.mark{ 
+            margin-top: 25px;
+            padding: 20px;
+            /* background-color:#caffec; */
+            background-image: linear-gradient(to bottom right,#10e481,#caffec,#00332c);
+            float: left;
+            width: 100%;
+        }
+
+        div.mark a { 
+            text-decoration: none;
+            color: white;
+            display: block;
+            float: left;
+            margin-left: 550px;
+            /* margin-right: auto; */
+            padding: 15px 35px;
+            background-color: #d5294d;;
+            border-radius: 15px;
+            margin-top: 25px;
+        }
+
+        .mark a:hover{ background-color: #0000ff;}  
+
+        div.faq {
+            float: left;
+            padding: 20px 90px;
+            text-align: justify;
+        }
+
+        .faq h3 { padding: 15px; color: rgb(86, 84, 84);}
+
+        .faq p { color: rgb(101, 96, 96);}
+
+        .faq img { 
+            float: right;
+            margin-top: 0;
+            height: 30px;
+            width: 30px;
+            margin-left: 10px; }
+               
+        
+       
+    </style>
+</head>
+<body>
+    <Div class="head">
+        <img src="assets/Images/White hat jr logo.jpg" alt="WhiteHat Jr" height="100px" width="200px" style="float: left; margin-left:30px;">
+
+        <div id="nav" style="float: left;">
+        <ul> 
+            <li> <a href="Project.html">Join Our Courses :</a>
+                <ul class="drop">
+                    <li><a href="Project.html">Coding</a></li>
+                    <li><a href="math.html">Math</a></li>
+                    <li><a href="music.html">Music (kids)</a></li>
+                    <li><a href="art.html">Art, Animation & Video</a></li>
+                </ul>
+            
+            </li>
+        </ul>
+        </div>
+
+        <div class="Join">
+            <button class="btn">
+                <a href="Login.html" >Join Class Now</a>
+            </button> 
+        </div>
+
+        <div class="slots">
+            <button class="book">
+                <img src="assets/Images/calender icon 16px.png" style="float: left; margin-right: 10px; height: 20px; width: 20px;">
+                <a href="Login.html"> Book a Free Trial</a>
+            </button> 
+        </div>
+
+    </Div>
+
+    <div class="music"> 
+        <h1 style="font-size: 50px; float: left; color: #48091a; padding-top: 40px;">Perform with Music</h1>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SgPnUYf_loo?si=eGh5qbPPMIZRrwGS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <p style="float: left; font-size: 20px; color: #48091a; padding-top: 30px;">Learn music Live with Highly qualified teachers <br> <br>
+            <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Music Trial</a>
+        </p>
+
+    </div>
+
+    <div class="poster">
+        <div class="front">
+            <img src="assets/Images/poster music.jpg" height="100%" width="100%">
+        </div>
+
+        <div class="front">
+            <h1 style="font-size: 50px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #0a0b5c;">Start a lifelong passion for Music</h1>
+
+            <p style="padding-top: 30px; font-size: larger; color: #0a0b5c;">Master an instrument with personalized curriculum <br><br>
+                <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Music Trial</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="why">
+        <h1>Why Perform with Music?</h1>
+
+        <p>Enjoy a modern, creativity- and performance-based curriculum. Students master technical skills through songs
+            they like, compose songs and build confidence through live performances. Practice is more fun with our
+            groundbreaking games and engaging projects.</p> <br> <hr><br> 
+         
+        <h2>What makes our curriculum different</h2>  <br> 
+        
+        <div class="curriculum" style="padding-top: 50px;">1:1 classes with top teachers</div>
+        <div class="curriculum" style="padding-top: 35px;">Creativity enhancing music projects</div>
+        <div class="curriculum" style="padding-top: 30px;">Customise learning sostudents love their journey</div>
+        <div class="curriculum" style="padding-top: 25px;">Enhancing Activities and games to promote practice</div>
+        <div class="curriculum" style="padding-top: 30px;">Live performances by student</div>
+
+        <p style="padding-top: 50px; font-size: larger; color: #0a0b5c;">Access your ground breaking music curriculum <br><br>
+            <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Music Trial</a>
+        </p>
+
+
+    </div>
+
+    <div class="mark">
+        <h1 style="text-align: center; color: #00332c;">Perform with Music has been custom-built for a superior online learning experience</h1>
+        <a href="schedule class.html"><img src="assets/Images/calender icon 16px.png">Book a FREE Music Trial</a>
+    </div>
+
+    <div class="faq"> 
+        <h1 style="text-align: center;">Frequently Asked Question's(FAQs)</h1>
+
+        <h3>Can children learn a musical instrument online?</h3>
+        <p>Absolutely! We do three things to make that happen: (1) use a custom-built curriculum created especially for an online class, (2) rigorously train teachers to deliver delightful online classes, (3) use a custom platform for music that supports resources like backing tracks and sheet music.</p> <br><hr>
+
+        <h3>Do I need an instrument to enroll in the course?</h3>
+        <p>No. You do not need an instrument for the trial or for the first four classes of the Discovery level.</p> <br><hr>
+
+        <h3>Which instruments do you teach in this course?</h3>
+        <p>Piano and guitar.</p> <br><hr>
+
+        <h3>My child has taken some classes already. Will they start as a beginner?</h3>
+        <p>During the trial class, our teacher will assess your child and discuss the right starting point for them with you.</p> <br><hr>
+
+        <h3>Can we skip the Discovery level and start instrument classes directly?</h3>
+        <p>Yes you can. However, we encourage students to start with the Discovery level, as it builds excitement for learning music which makes for a great start to their learning journey!</p> <br><hr>
+
+        <h3>Do students learn Western classical music or something else?</h3>
+        <p>Students are most motivated when they learn and play songs they like. The songs may be from any genre, including Western classical music. We recognize that Western classical music builds a strong foundation, so we incorporate its techniques and offer many choices from legends like Mozart, Beethoven and Bach to our students.</p> <br><hr>
+
+        <p style="padding-top: 15px;">Copyright WhiteHat Education Technology Pvt ltd © 2022. All Rights Reserved
+
+            <a href="https://www.facebook.com/whitehatjr" target="_blank">
+                <img src="assets/Images/facebook logo_icon.png" >
+            </a>
+
+            <a href="https://www.instagram.com/whitehatjr/?hl=en" target="_blank">
+                <img src="assets/Images/instagram logo_icon.png" >
+            </a>
+
+            <a href="https://twitter.com/whitehatjunior?lang=en" target="_blank">
+                <img src="assets/Images/twitter logo_icon.png">
+            </a>
+
+            <a href="https://www.youtube.com/c/WhitehatJr">
+                <img src="assets/Images/youtube logo_icon.png">
+            </a>
+                
+        </p> <br> <br><hr>
+
+    </div>
+</head>
+<body>
+    
+</body>
+</html>

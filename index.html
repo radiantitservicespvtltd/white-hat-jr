@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteHat Jr | Live online coading, math & music classes for kids</title>
+    <link rel="icon" type="image" href="assets/Images/whitehat-jr-Favicon.jpg">
+
+    <style>
+        * { margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+        
+        div.head { 
+            height:100px ;
+            width: 100%;
+            background-color: white;
+            float: left; 
+            box-sizing: border-box;
+        }
+        
+        ul { list-style-type: none;  font-size: 20px;}
+        
+        ul li { 
+            display: inline-block;
+            position: relative; 
+            }
+        
+        ul li a { 
+            display: block;
+            padding: 20px 35px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            
+        }    
+
+        ul li ul.drop li { display: block;}
+
+        ul li ul.drop { 
+            width: 100%;
+            background-color: white;
+            color: black;
+            position: absolute;
+            display: none;
+            z-index: 1;
+        }
+
+        ul li a:hover { background-color: orangered; color: white;}
+
+        ul li:hover ul.drop { display:block;}
+
+        ul:first-child{margin-top: 20px; margin-left: 50px; box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5); }
+
+        .Join .btn { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 100px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s;}
+        
+        .btn a { 
+            text-decoration: none;
+            color: black; }
+        
+        .Join:hover .btn{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px;}
+
+        .Join:hover .btn a { color: white;}
+
+        .slots .book { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            float: left;
+            margin-top: 20px; 
+            margin-left: 320px; 
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s; 
+            animation: books 1s ease-in-out 2s infinite alternate;}
+
+        @keyframes books { 
+            from { background-color: white; color: black; }
+            to { background-color:rgba(255, 69, 0,0.9); color: white;}
+        }    
+         
+        .book a { 
+            text-decoration: none;
+            color: black; }    
+        
+        .slots:hover .book{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px; 
+            animation: none;}
+
+        .slots:hover .book a { color: white;}    
+
+        div.front { width: 100%;
+            height: 450px;
+            position: relative;
+            /* background-color: #c34dc1; */
+            background-image: linear-gradient(to bottom left,#8a64b9,#bba4bc,#e8e0f4,#35204b);
+            float: left;}
+        
+        div.title { 
+            position: absolute;
+            top: 100px;
+            left: 30px;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            float: left;
+            color: #35204b;
+        }    
+
+        div.title:hover { text-shadow: 2px 2px 3px black}
+
+        div.article { 
+            height: 320px; 
+            width: 46%; 
+            background-color: #d7f0e7; 
+            float: left; 
+            margin-top: 20px;
+            box-shadow: 2px 2px 5px #9bacb2; }
+
+        div.vid{ 
+            margin-left: 4%;}
+        
+        div.article h1 { 
+            text-transform: capitalize;
+            padding: 20px 25px 0 25px;
+            font-size: 40px;
+            text-shadow: 1px 1px 2px grey;
+         }
+
+        div.article h5,p { 
+            padding: 15px 25px 5px 25px ;
+            font-size: larger;
+            color: #747778;
+        }
+
+
+        .slots .free { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            /* display: inline-block; */
+            font-size: 16px;
+            cursor: pointer;
+            /* margin-top: 20px; */
+            margin-right: 200px;  
+            float: right;
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s; 
+            animation: books 1s ease-in-out 2s infinite alternate;}
+
+        @keyframes books { 
+            from { background-color: white; color: black; }
+            to { background-color:rgba(255, 69, 0,0.9); color: white;}
+        }    
+         
+        .free a { 
+            text-decoration: none;
+            color: black; }    
+        
+        .slots:hover .free{ background-color:rgba(255, 69, 0,0.9); 
+            padding: 20px 40px; 
+            animation: none;}
+
+        .slots:hover .free a { color: white;} 
+
+        div.offer { 
+            height: 320px; 
+            width: 30%; 
+            float: left; 
+            margin-top: 20px;
+            box-shadow: 2px 2px 5px #9bacb2; }
+
+        div.minecraft {
+            width: 70%;
+            float: left;
+            height: 320px;
+            margin-top: 20px;
+            padding: 20px 30px;
+            background-image:linear-gradient(#b9ffb4,#98ff90,#00ff00,#098500 99%    ) ;
+        }  
+        
+        .slots .craft { 
+            background-color: white;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            font-size: 16px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(255, 170, 13, 0.5);
+            border: 2px solid rgba(255, 69, 0,0.6);
+            transition: 0.5s; 
+            animation: mine 1s ease-in-out 2s infinite alternate;}
+
+        @keyframes mine { 
+            from { background-color: white; color: black; }
+            to { background-color:rgba(255, 24, 24, 0.886); color: white; font-weight: bold;}
+        }    
+
+
+         
+        .craft a { 
+            text-decoration: none;
+            color:black; }    
+        
+        .slots:hover .craft{ background-color: #98f845; 
+            border: none;
+            padding: 20px 40px; 
+            box-shadow: 5px 5px 10px black;
+            animation: none;}
+
+        .slots:hover .craft a { color:black; font-weight: bold;} 
+
+        div.minecraft h1,h2 { padding: 15px 0; text-align: center; color: #205017;}
+
+        div.minecraft p { color: black; font-size: 16px; padding-left:50px; padding-top: 60px; padding-right: 0;}
+
+        div.Course {
+            width: 100%;
+            height: auto;
+            padding: 30px;
+            /* background-color:red; */
+            background-image: linear-gradient(to bottom right ,#cefaff,#a4f2fd,#145d76, #073245);
+            margin-top: 50px;
+            float: left; }
+        
+        div.sub { 
+            width: 20%;
+            height: 300px;
+            background-color: #d5d2ff;
+            border-radius: 8px;
+            /* display: inline-block; */
+            margin-left: 48px;
+            float: left;
+            transition:all 0.3s;
+        }
+
+        div.sub:hover {
+            box-shadow: 2px 2px 5px black;
+            width: 20.5%;
+            height: 310px;
+        }
+
+        div.button { 
+            width: 80%;
+            height: 35px;
+            padding-top: 9px;
+            text-align: center;
+            background-color: #f8a764;
+            margin: 10px 10%;
+            border-radius: 16px;
+            transition: 1s; 
+            }
+
+        div.button:hover { 
+            background-color: #4450ff;
+            color: white;
+        }  
+        
+        div.button h3 { color: #111c96; padding-top: 15px;}
+
+        div.teacher { 
+            width: 100%;
+            height: auto;
+            padding: 30px;
+            background-image: linear-gradient(to bottom right ,#fff1e5,#ffa1ac,#e51d35, #841825);
+            margin-top: 50px;
+            float: left;
+        }
+
+        div.imag { 
+            width: 100%;
+            padding: 25px;
+            float: left;
+        }
+
+        div.edu {
+            width: 35%;
+            height: 250px;
+            float: left;
+        }
+
+        div.infor { 
+            width: 65%;
+            float: left;
+            height: 250px;
+            box-sizing: border-box;
+            background-color: #ffc7ce;
+        }
+
+        div.infor h2,p { color: black;}
+
+        div.teacher h1 { color:  #841825; text-align: center; font-size: 40px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ; }
+
+        .slots .second { 
+            background-color: #f83b52;
+            border: none;
+            padding: 20px 35px;
+            text-align: center;
+            font-size: 16px;
+            display: block;
+            margin-top: 10px;
+            border-radius: 6px;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px #48070f;
+            transition: 0.5s; 
+            animation: mine 1s ease-in-out 2s infinite alternate;}
+
+        @keyframes mine { 
+            from { background-color: #f83b52; color: black; }
+            to { background-color:#9f1526; color: white; font-weight: bold;}
+        }    
+         
+        .second a { 
+            text-decoration: none;
+            color:white; }    
+        
+        .slots:hover .second{ background-color: #84004f; 
+            border: none;
+            padding: 20px 40px; 
+            box-shadow: 5px 5px 10px black;
+            animation: none;}
+
+        .slots:hover .craft a{ color:white; font-weight: bold;} 
+
+        /* card flip navin kaytr */
+
+        div.navin { 
+            width: 20%;
+            height: 300px;
+            background-color: #073245;
+            float: left;
+            padding: 20px;
+            border-radius: 16px;
+            perspective: 4000px;
+            /* margin: 15px 40px; */
+            margin-left: 130px;
+            margin-top: 20px;
+        }
+
+        div.flip { 
+            height: 300px;
+            border-radius: 16px;
+            position: absolute;
+            width: 100%;
+            padding: 15px;
+            transition: all 1s;
+            backface-visibility: hidden;
+        }
+
+        div.flip.backside { 
+            transform: rotateY(-180deg);
+            background-color: #ec474c;
+        }
+
+        div.flip.frontside{ 
+            background-color: yellowgreen; }
+
+        .navin:hover .flip.frontside { 
+            transform: rotateY(180deg);
+        }
+
+        .navin:hover .flip.backside { 
+            transform: rotateY(0deg);
+        }
+
+        div.ad h1 , h3,p { padding:5px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+        div.ad p { font-size: 20px;}
+
+        div.ad h3 { font-size: 26px;}
+
+        div.ad h1 { font-size: 35px;}
+
+        div.asch { 
+            width: 100%;
+            height: auto;
+            padding: 30px;
+            float: left;
+            margin-top: 30px;
+            background-image: linear-gradient(to bottom left,#fefcc3,#736b00 99%); 
+        }
+
+        div.ad a { 
+            display: block;
+            padding: 20px 30px;
+            text-decoration: none;
+            background-color: white;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+            color: black;
+            margin-top: 20px;
+        }
+
+        div.mind a{ 
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            background-color: #111c96;
+            color: white;
+            border-radius: 18px;
+            text-shadow: 2px 2px 3px black;
+        }
+
+        div.mind h2{ color: black; }
+
+        div.mind:hover a { 
+            background-color: #98f845;
+            color: black;
+            text-shadow: none;
+        }
+        div.mind { 
+            float: left;
+            width: 100%;
+            height: 100px;
+            background-color: #f5d192;
+            padding-top: 10px;
+        }
+
+        div.end { padding:20px 80px; float: left;}
+
+        div.end p{
+            color: rgb(148, 142, 142);
+            padding: 10px 150px;
+            text-align: justify;}
+
+         .end h2 {  color: rgb(148, 142, 142); }   
+
+
+         .end img { 
+            float: right;
+            margin-top: 0;
+            height: 30px;
+            width: 30px;
+            margin-left: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <Div class="head">
+        <img src="assets/Images/White hat jr logo.jpg" alt="WhiteHat Jr" height="100px" width="200px" style="float: left; margin-left:30px;">
+
+        <div id="nav" style="float: left;">
+        <ul> 
+            <li> <a href="Project.html">Join Our Courses :</a>
+                <ul class="drop">
+                    <li><a href="Project.html" target="_blank">Coding</a></li>
+                    <li><a href="math.html" target="_blank">Math</a></li>
+                    <li><a href="music.html" target="_blank">Music (kids)</a></li>
+                    <li><a href="art.html" target="_blank">Art, Animation & Video</a></li>
+                </ul>
+            <!-- <li><a href="Join Class Now" >Join Class Now</a></li>     -->
+            </li>
+        </ul>
+        </div>
+
+        <div class="Join">
+            <button class="btn">
+                <a href="Login.html" >Join Class Now</a>
+            </button> 
+        </div>
+
+        <div class="slots">
+            <button class="book">
+                <img src="assets/Images/calender icon 16px.png" style="float: left; margin-right: 10px; height: 20px; width: 20px;">
+                <a href="schedule class.html"> Book a Free Trial</a>
+            </button> 
+        </div>
+
+    </Div>
+
+    <div class="front">
+        <img src="assets/Images/banner first page.png" alt="WhiteHat jr" width="58%" height="450" style="float:right; ">
+
+        <div class="title">
+             <h1>"Empowering Kids <br> to Code their <br> bright futures!"</h1> 
+             <!-- <p>
+             - Early coding Skills <br> 
+             - Creativity and Innovation <br>
+             - Confidence Buildig <br>
+             - Digital Literacy <br>
+             - Critical Thinking
+            </p> -->
+        </div>
+    </div>
+
+    <div class="article vid">
+        <iframe  src="https://www.youtube.com/embed/4C15fGYzTcQ?si=u7DUvaUX61Nm8Vbi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; height: 100%;"></iframe> 
+      
+    </div>
+
+    <div class="article content"> 
+        <h1>Live 1 : 1 Online coding classes for kids in grade 1-12</h1>
+        <p style="padding-left: 25px;">Our proprietary, activity-based curriculum with live, real-time instruction <br> generates: Problem Solving. Creative Thinking. Grit. Confidence. <br>Communication.</p>
+
+        <h5> <img src="assets/Images/party hat icon.png"> <img src="assets/Images/party hat icon.png">And Also it's a lot of fun, too!</h5>
+
+           <div class="slots">
+            <button class="free">
+                <img src="assets/Images/calender icon 16px.png" style="float: left; margin-right: 10px; height: 20px; width: 20px;">
+                <a href="schedule class.html"> Book a Free Trial</a>
+            </button> 
+        </div>
+    </div>
+
+    <div class="minecraft">
+        <h1 style="text-transform: capitalize; font-size: 50px; ">Code with mine craft today</h1>
+
+        <h2>Register for the perfect introduction to coding and game design</h2>
+
+        <div class="slots">
+            <button class="craft">
+                <img src="assets/Images/calender icon 16px.png" style="float: left; margin-right: 10px; height: 20px; width: 20px;">
+                <a href="schedule class.html"> Book a Free Trial</a>
+            </button> 
+        </div>
+
+        <p>*Code with Minecraft is available for kids ages 6-14 .This is not an official minecraft product and not associated with mojang.</p>
+    </div>
+
+    <div class="offer">
+        <img src="assets/Images/group image minecraft.jpg" alt="Code with Minecraft" width="100%" height="100%">
+    </div>
+
+    <div class="Course">
+        <h1 style="text-align: center; font-weight: bolder; font-size: 40px; padding-bottom: 20px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #154e64;">Our Courses</h1>
+
+        <div class="sub coding">
+            <img src="assets/Images/learn coding.png" alt="Learn Coading" height="60%" width="100%">
+
+            <div class="button">
+                For Grade 1 - 12
+
+                <h3 style="padding-top: 30px;"> Learn Coding</h3>
+            </div>
+        </div>
+
+        <div class="sub math">
+            <img src="assets/Images/learn math.png" alt="Learn Math" height="60%" width="100%">
+
+            <div class="button">
+                For Grade 1 - 8
+
+                <h3 style="padding-top: 30px;">Learn Math </h3>
+            </div>
+        </div>
+
+        <div class="sub music">
+            <img src="assets/Images/learn music.png" alt="Learn Music" height="60%" width="100%">
+
+            <div class="button">
+                For Grade 1 - 12
+
+                <h3 style="padding:8px 1px;">Learn Music <br>[Solo Classes Available]</h3>
+            </div>
+        </div>
+
+        <div class="sub art">
+            <img src="assets/Images/learn art.png" alt="Learn Art, Animation and Video" height="60%" width="100%">
+
+            <div class="button">
+                For Grade 3 - 7
+
+                <h3>Learn Art, Animation & Video</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="teacher">
+        <h1>Our Expert coding educators</h1>
+
+        <div class="imag">
+            <div class="edu">
+            <img src="assets/Images/coding educators.png" height="100%" width="100%" style="float: left;">
+            </div>
+             
+            <div class="infor">
+            <h2>Top 1% teachers selected by an industry-leading 4-step teacher assignment process by top 1% of early childhood coding experts </h2>
+
+            <p>WhiteHat Jr follows a rigorous 4-Step selection process for confirming teacher candidates so your children are taught by th Top Early childhood Coding Experts </p>
+
+            <div class="slots">
+                <button class="second">
+                    <img src="assets/Images/calender icon 16px.png" style="float: left; margin-right: 10px; height: 20px; width: 20px;">
+                    <a href="schedule class.html"> Book a Free Trial</a>
+                </button> 
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="asch">
+    <div class="navin">
+        <div class="flip frontside">
+            <div class="ad">
+                 <h1>Monthly Plan</h1>
+                 <p>8 Classes</p>
+                 <h3>Achievements</h3>
+                 <p>-Introduction to Coding</p>
+            </div>
+        </div>
+
+        <div class="flip backside">
+            <div class="ad">
+                <h1>Curriculum Includes</h1>
+                <p>Coding Fundamentals</p>
+
+                <a href="mailto:shirkeshubhamb@gmail.com">Contact Us :</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navin">
+        <div class="flip frontside">
+            <div class="ad">
+                <h1>Semi Annual Plan</h1>
+                 <p>96 Classes</p>
+                 <h3>Achievements</h3>
+                 <p>-App Developer Certificate <br>-Publish Your App to Playstore </p>
+            </div>
+        </div>
+
+        <div class="flip backside">
+            <div class="ad">
+                <h1>Curriculum Includes</h1>
+                <p>Creative Coding</p>
+
+                <a href="mailto:shirkeshubhamb@gmail.com">Contact Us :</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navin">
+        <div class="flip frontside">
+            <div class="ad">
+                <h1>Two Year Plan</h1>
+                <p>192 Classes</p>
+                <h3>Achievements</h3>
+                <p>- Lifetime Access <br>- Space Tech <br>- 18 under 18 fellowship </p>
+            </div>
+        </div>
+
+        <div class="flip backside">
+            <div class="ad">
+                <h1>Curriculum Includes</h1>
+                <p>- Game Developement <br> - AI Front-End <br> -STEM apps</p>
+
+                <a href="mailto:shirkeshubhamb@gmail.com">Contact Us :</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="mind">
+        <h2>WhiteHat Jr is the top coding learning platform for young minds. <a href="Login.html" style="margin-left: 30px;">Book a free Trial</a></h2> <br><br>
+    </div>
+
+    <div class="end">
+        <h2>About WhiteHat Jr</h2>
+        <p>Today, in the computer age, not all schools teach coding in early childhood resulting in a major gap in the requirements of the new world and our children's skills. WhiteHat Jr introduces and prepares your child from 6-18 years for this new coding world. They learn fundamentals of coding--logic, structure, sequence and algorithmic thinking--to generate creative outcomes like animations and apps. All classes are taught Live 1:1 Online in the comfort of your home by Top 1% selected teachers and subject matter experts.</p> <br><hr>
+
+        <h2>Coding For Kids</h2>
+        <p>Whether you are a student interested in the IT careers that you could explore with a coding qualification or just fascinated by the world of tech and coding courses, WhiteHat Jr offers a wide range of online coding courses that make coding accessible to kids and young teenagers. We've put together a simple guide to answer some of the most commonly asked questions from parents and prospective students to help you understand the basics of what our kids programming courses cover, whether they are right for your child and how best to navigate them.</p> <br><hr>
+
+        <h2>Curious about what is involved in courses for coding for kids?</h2> 
+        <p>We have developed kids programming courses that allow kids, teens, and young adults to learn how to code at all ages with proper coding classes and in an environment that works for them – Online. The courses offered by WhiteHat Jr are designed to teach kids to code with core programming skills, and then improve the proficiency of the kids coding languages. Our facilitators align digital literacy into coding courses, as required by the existing skills of the learners. Since our curriculum is developed by industry experts and the most important activity of teaching coding is done by top 1% selected teachers, learners get state of the art education through our propriety, creative activity based curriculum.</p> <br><hr>
+
+        <h2>Are coding classes for kids suitable?</h2>
+        <p>When you're a parent exploring the possibilities that coding classes for kids can bring, you 're probably wondering whether coding courses will suit your child. The benefits of learning to code courses extend far beyond future job opportunities. WhiteHat Jr teaches coding for kids in programs designed to stimulate creativity, problem-solving skills, and academic performance overall. Over the longer term, online coding courses are a great way to train learners for an increasingly tech-oriented world.</p> <br><hr>
+
+        <h2>Start to learn coding with us!</h2>
+        <p>If you are a motivated parent and passionate about technology and where it can lead you to, then Join now. If you or your child would like to find out more about the opportunities provided by our coding programs, explore the kids programming courses offered by WhiteHat Jr and consider enrolling for a free trial. Remember, no coding experience beforehand is required.</p> <br><hr>
+
+        <p style="padding-top: 25px;">Copyright WhiteHat Education Technology Pvt ltd © 2022. All Rights Reserved 
+            <a href="https://www.facebook.com/whitehatjr" target="_blank">
+                <img src="assets/Images/facebook logo_icon.png" >
+            </a>
+
+            <a href="https://www.instagram.com/whitehatjr/?hl=en" target="_blank">
+                <img src="assets/Images/instagram logo_icon.png" >
+            </a>
+
+            <a href="https://twitter.com/whitehatjunior?lang=en" target="_blank">
+                <img src="assets/Images/twitter logo_icon.png">
+            </a>
+
+            <a href="https://www.youtube.com/c/WhitehatJr">
+                <img src="assets/Images/youtube logo_icon.png">
+            </a>
+        </p> <br><hr>
+
+    
+    </div>
+
+    
+</body>
+</html>
